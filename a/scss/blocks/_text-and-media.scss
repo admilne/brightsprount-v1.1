@@ -1,0 +1,8 @@
+.text-and-media {
+    display: grid;
+    grid-template-columns: 55% 1fr;
+    gap: 4rem;
+    @media screen and (max-width: $breakpoint__tablet) {
+        grid-template-columns: 1fr;
+    }
+}

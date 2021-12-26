@@ -1,0 +1,67 @@
+.banner {
+    position: relative;
+    z-index: -1;
+    overflow: hidden;
+
+    &:first-child {
+        margin-top: -4vw;
+    }
+
+    img {
+        width: 100%;
+        display: block;
+    }
+
+    &__textArea {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 70%;
+        display: grid;
+        align-items: center;
+        align-content: center;
+
+        &--left {
+            left: 0;
+        }
+
+        &--right {
+            right: 0;
+        }
+
+        h1,h2,h3,h4,h5 {
+            line-height: 1;
+            font-weight: bold;
+            font-family: Paralucent, Arial, sans-serif;
+        }
+
+        h1 { font-size: 9vw; }
+        h2 { font-size: 7vw; }
+        h3 { font-size: 5vw; }
+        h4 { font-size: 3vw; }
+        h5 { font-size: 2vw; }
+
+        @media screen and (max-width: $breakpoint__phone) {
+            p {
+                line-height: 1.1;
+            }
+        }
+    }
+
+    &__textContent {
+        padding: 4vw;
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        background: url(./../../a/img/curves_banner.svg) bottom left no-repeat;
+        // background-size: cover;
+        height: 4vw;
+        transform: translateY(2px);
+        bottom: 0;
+        z-index: 1;
+        width: 101%;
+        position: absolute;
+    }
+}

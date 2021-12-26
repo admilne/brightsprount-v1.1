@@ -1,0 +1,52 @@
+// Notes
+// All styles use BEM standards - block__element--modifier
+
+// General colours
+
+$white                                          : #ffffff;
+$grey                                           : #F4F6F7;
+$darkGrey                                       : #80888D;
+$green                                          : #74C868;
+$darkGreen                                      : #2A8237;
+$dark                                           : #37505A;
+$black                                          : #000000;
+
+
+// Font Stacks
+
+$font__primary							        : Paralucent, Arial, sans-serif;
+$font__secondary    							: Roboto, Georgia, "Times New Roman", Times,serif;
+
+// Font Weights
+
+$font__weight--light							: 300;
+$font__weight--normal							: 400;
+$font__weight--bold								: 700;
+
+// Vertical Rhythm
+
+$vr__baseFontSize                               : 1.6rem;
+$vr__lineHeight                                 : 1.4;
+$vr__scale                                      : 1.25;
+
+// Spacing
+
+$spacing										: $vr__baseFontSize;
+$spacing--small									: $vr__baseFontSize / 2;
+$spacing--large									: $vr__baseFontSize * 2;
+
+// Transitions
+
+$transitionTime                                 : 0.3s;
+
+// Breakpoints
+
+$breakpoint__tablet								: 1024px;
+$breakpoint__phone								: 768px;
+
+// Image Dimensions
+
+$aspectRatio__classic                           : aspectRatio(4,3);
+$aspectRatio__widescreen                        : aspectRatio(16,9);
+$aspectRatio__cinemascope                       : aspectRatio(21,9);
+

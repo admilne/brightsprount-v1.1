@@ -1,0 +1,315 @@
+/* Normalise
+------------------------------------------------------------------------------------ */
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {margin:0;padding:0;border:0;font-weight:inherit;font-style:inherit;font-size:100%;font-family:inherit;vertical-align:baseline;}
+table {border-collapse:separate;border-spacing:0;}
+caption, th, td {text-align:left;font-weight:normal;}
+table, td, th {vertical-align:middle;}
+blockquote:before, blockquote:after, q:before, q:after {content:"";}
+blockquote, q {quotes:"" "";}
+a img {border:none;}
+img {max-width:100%; height: auto;}
+
+html {
+	font-size: 10px; // Used to make calculating REM sizes easier
+	box-sizing: border-box;
+}
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+body {
+	color: $dark;
+	font-family: $font__secondary;
+	font-size: $vr__baseFontSize;
+	line-height: $vr__lineHeight;
+}
+
+h1, h2, h3, h4, h5, p {
+	// margin-top: ($vr__lineHeight * 2) * 1rem;
+	margin-bottom: $vr__lineHeight * 1rem;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+h1, h2, h3, h4 {
+	font-family: $font__primary;
+	font-weight: bold;
+}
+
+h1 {
+	font-size: 7.2rem;
+	@media screen and (max-width: $breakpoint__tablet) {
+		font-size: 4.8rem;
+	}
+}
+
+h2 {
+	font-size: 4.8rem;
+	margin-bottom: 0.75em;
+	text-align: center;
+	@media screen and (max-width: $breakpoint__tablet) {
+		font-size: 3.6rem;
+	}
+	@media screen and (max-width: $breakpoint__tablet) {
+		font-size: 2.8rem;
+	}
+}
+
+h3 {
+	font-size: 3.6rem;
+	@media screen and (max-width: $breakpoint__tablet) {
+		font-size: 2.2rem;
+	}
+}
+
+h4 {
+	font-size: 2.2rem;
+	@media screen and (max-width: $breakpoint__tablet) {
+		font-size: 1.8rem;
+	}
+}
+
+h5 {
+	font-size: $vr__baseFontSize * pow($vr__scale, 1);
+}
+
+h6 {
+	font-size: $vr__baseFontSize;
+}
+
+p {
+	font-size: $vr__baseFontSize;
+	margin-top: 0;
+
+	&.large-text {
+		font-size: 2.4rem;
+		@media screen and (max-width: $breakpoint__tablet) {
+			font-size: 1.8rem;
+		}
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+a {
+	color: $dark;
+	transition: color $transitionTime;
+	&:hover {
+		color: $darkGreen;
+	}
+}
+
+ul {
+	font-size: 1.6rem;
+	margin-left: 36px;
+	margin-bottom: 1em;
+}
+
+ol {
+	font-size: 1.6rem;
+	margin-left: 36px;
+	margin-bottom: 1em;
+}
+
+// Remove iOS styling from input elements
+input[type="text"],
+input[type="button"] {
+	-webkit-appearance: none;
+}
+
+/* Wordpress Defaults
+------------------------------------------------------------------------------------ */
+	.alignleft {
+		float: left;
+	}
+
+	.alignright {
+		float: right;
+	}
+
+	.aligncenter {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	img.alignleft {
+		margin: 5px 20px 5px 0;
+	}
+
+	.wp-caption.alignleft {
+		margin: 5px 10px 5px 0;
+	}
+
+	img.alignright {
+		margin: 5px 0 5px 20px;
+	}
+
+	.wp-caption.alignright {
+		margin: 5px 0 5px 10px;
+	}
+
+	img.aligncenter {
+		margin: 5px auto;
+	}
+
+	img.alignnone {
+		margin: 5px 0;
+	}
+
+	.wp-caption .wp-caption-text,
+	.entry-caption,
+	.gallery-caption {
+		color: #220e10;
+		font-size: 18px;
+		font-style: italic;
+		font-weight: 300;
+	}
+
+	img.wp-smiley,
+	.rsswidget img {
+		border: 0;
+		border-radius: 0;
+		box-shadow: none;
+		margin-bottom: 0;
+		margin-top: 0;
+		padding: 0;
+	}
+
+	.wp-caption.alignleft + ul,
+	.wp-caption.alignleft + ol  {
+		list-style-position: inside;
+	}
+
+
+/* Site wide styles
+------------------------------------------------------------------------------------ */
+
+	body.menuOpen {
+		max-height: 100vh;
+		overflow: hidden;
+	}
+
+	.full-width-wrapper {
+		left: 50%;
+		margin-left: -50vw;
+		margin-right: -50vw;
+		max-width: 100vw;
+		position: relative;
+		right: 50%;
+		width: 100vw;
+	}
+
+	.page-container {
+		width: 1440px;
+		max-width: 90vw;
+		margin: 0 auto;
+		padding: 0 6.4rem;
+
+		&--narrow {
+			width: 1000px;
+		}
+
+		@media screen and (max-width: $breakpoint__tablet) {
+			max-width: 95%;
+			padding: 0;
+			overflow: hidden;
+		}
+	}
+
+	.page-section {
+		margin: 8rem 0;
+		@media screen and (max-width: $breakpoint__tablet) {
+			margin: 4rem 0;
+		}
+
+		&--alt,
+		&--primary,
+		&--secondary {
+			color: $white;
+			padding: 4rem 0;
+			@media screen and (max-width: $breakpoint__tablet) {
+				padding: 2rem 0;
+			}
+
+			.page-container {
+				&-wrap {
+					padding: 8rem 0;
+					background-color: $green;
+					@media screen and (max-width: $breakpoint__tablet) {
+						padding: 4rem 0;
+					}
+				}
+			}
+
+			&:before,
+			&:after {
+				content: "";
+				display: block;
+				// background: url(./../../a/img/curves5-short.png) bottom left no-repeat;
+				background: url(./../../a/img/curves6.png) bottom left no-repeat;
+				background-size: 100% 100%; // width height
+				height: 4vw;
+				transform: translateY(2px);
+			}
+
+			&:after {
+				transform: rotate(180deg) translateY(2px);
+			}
+
+			h2:first-of-type {
+				margin-top: 0;
+			}
+		}
+
+		&--secondary {
+			.page-container {
+				&-wrap {
+					background-color: $dark;
+				}
+			}
+
+			&:before,
+			&:after {
+				background: url(./../../a/img/curves6-dark.png) bottom left no-repeat;
+				background-size: 100% 100%; // width height
+			}
+		}
+	}
+
+	.button {
+		display: inline-block;
+		background-color: #74C868;
+		// background-color: $dark;
+		color: #37505A;
+		color: $white;
+		font-family: Paralucent, Arial, sans-serif;
+		font-weight: bold;
+		border: none;
+		padding: 0.5em 2em;
+		border-radius: 10px;
+		transition: all 0.3s;
+		text-decoration: none;
+		&:hover {
+			cursor: pointer;
+			background-color: #2A8237;
+			background-color: $darkGreen;
+			color: #F4F6F7;
+		}
+
+		.page-section--alt &,
+		.page-section--primary &,
+		.page-section--none & {
+			background-color: $dark;
+			color: $white;
+
+			&:hover {
+				background-color: $darkGreen;
+			}
+		}
+	}

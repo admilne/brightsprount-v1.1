@@ -1,0 +1,66 @@
+.footer {
+    padding: 4rem 0;
+    color: #fff;
+    background-color: $dark;
+
+    &-columns {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+
+        p {
+            font-size: 1.4rem;
+        }
+    }
+
+    &__social-media-icons {
+        margin-top: 4rem;
+        a {
+            margin-right: 1rem;
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+    }
+
+    &-logo {
+        display: block;
+        width: 10rem;
+        margin: 5rem auto 0 auto;
+    }
+
+    label {
+        font-size: 1.4rem;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        width: 100%;
+        border: none;
+        padding: 0.5em;
+        border-radius: 3px;
+        font-family: $font__secondary;
+    }
+
+    input[type="submit"] {
+        background-color: $green;
+        color: $dark;
+        font-family: $font__primary;
+        font-weight: bold;
+        border: none;
+        padding: 0.5em 2em;
+        border-radius: 10px;
+        transition: all 0.3s;
+        &:hover {
+            cursor: pointer;
+            background-color: $darkGreen;
+            color: $grey;
+        }
+    }
+
+    a {
+        color: $white;
+        text-decoration: underline;
+    }
+}

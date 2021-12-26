@@ -1,0 +1,144 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $white;
+    padding: 2rem 0;
+    @media screen and (max-width: $breakpoint__tablet) {
+      padding: 1rem 0;
+  }
+    
+    &__wrapper {
+        &:after {
+            content: "";
+            display: block;
+            // background: url(./../../a/img/curves6-dark.png) bottom left no-repeat;
+            background: url(./../../a/img/curves-header.png) bottom left no-repeat;
+            background-size: 102% 102%; // width height
+            height: 4vw;
+            transform: rotate(180deg) translateY(2px);
+            background-repeat: no-repeat;
+        }
+        .page-container-wrap {
+            background-color: $dark;
+        }
+    }
+
+
+    &__left-side {
+        display: flex;
+        align-items: center;
+    }
+    
+    .logo img {
+        max-height: 11.4rem;
+        margin-right: 2rem;
+        max-width: 25vw;
+        @media screen and (max-width: $breakpoint__tablet) {
+            margin-right: 1rem;
+        }
+    }
+
+    a {
+        color: $white;
+    }
+}
+
+
+.header-content {
+    &__title {
+        font-size: 2.4rem;
+        line-height: 1;
+        margin: 0;
+        text-align: left;
+        @media screen and (max-width: $breakpoint__phone) {
+            font-size: 1.6rem;
+        }
+    }
+
+    &__caption {
+        font-size: 1.8rem;
+        color: $green;
+        @media screen and (max-width: $breakpoint__phone) {
+            font-size: 1.4rem;
+        }
+    }
+}
+
+.burgerMenu {
+    background-color: rgba($dark, 0.5);
+    width: 40px;
+    height: 40px;
+    position: relative;
+    border-radius: 5px;
+    z-index: 20;
+    display: none;
+    @media screen and (max-width: $breakpoint__tablet) {
+        display: block;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  
+    .bar {
+      width: 80%;
+      height: 10%;
+      position: absolute;
+      left: 50%;
+      margin-left: -40%;
+      transition: transform 0.3s 0.3s;
+      &:before {
+        border-radius: 10px;
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        transition: transform 0.3s;
+      }
+  
+      &--top {
+        transform: translateY(200%);
+      }
+  
+      &--middle {
+        transform: translateY(450%);
+      }
+  
+      &--bottom {
+        bottom: 0;
+        transform: translateY(-200%);
+      }
+    }
+  
+    &--open {
+      .bar {
+        transition: transform 0.3s;
+        &:before {
+          transition: transform 0.3s 0.3s;
+        }
+  
+        &--top {
+          transform: translateY(450%);
+          &:before {
+            transform: rotate(45deg);
+          }
+        }
+  
+        &--middle {
+          transform: translateY(450%);
+          &:before {
+            transform: rotate(45deg);
+          }
+        }
+  
+        &--bottom {
+          transform: translateY(-450%);
+          &:before {
+            transform: rotate(-45deg);
+          }
+        }
+      }
+    }
+  }
+  

@@ -1,0 +1,51 @@
+.page-title {
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    margin: 2em 0;
+    
+    &--hasImage {
+        // padding: 0 8em;
+        @media screen and (max-width: $breakpoint__phone) {
+            padding: 0;
+        }
+    }
+
+    &__wrapper {
+        text-align: center;
+    }
+
+    &__title {
+        line-height: 1;
+        position: relative;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__image {
+        height: 80%;
+        max-height: 85px;
+        vertical-align: middle;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 105%;
+        @media screen and (max-width: $breakpoint__phone) {
+            position: static;
+            height: 6rem;
+            transform:translateY(0);
+            margin-top: 10px;
+        }
+    }
+
+    &__caption {
+        color: $darkGrey;
+        margin-bottom: 0;
+    }
+
+    &__author {
+        font-style: italic;
+        font-size: 1.4rem;
+    }
+}

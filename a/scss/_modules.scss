@@ -1,0 +1,34 @@
+@import 'modules/header'; 
+@import 'modules/footer'; 
+@import 'modules/main-menu'; 
+
+// Blocks
+@import 'blocks/page-title';
+@import 'blocks/text-and-media';
+@import 'blocks/content-highlight-grid';
+@import 'blocks/logo-group.scss';
+@import 'blocks/testimonials.scss';
+@import 'blocks/image-gallery.scss';
+@import 'blocks/key-points.scss';
+@import 'blocks/post.scss';
+@import 'blocks/post-list.scss';
+@import 'blocks/text.scss';
+@import 'blocks/banner.scss';
+
+/* Modules
+------------------------------------------------------------------------------------ */
+
+.mobile-buger-menu-toggle {
+	background: url(../img/menu.png) no-repeat;
+	display: none; /* Turn off for desktop view */
+	height: 21px;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	width: 26px;
+	z-index: 20;
+	cursor: pointer;
+	@media screen and (max-width: 890px) {
+		display: block; /* Turn on for mobile view */
+	}
+}

@@ -1,0 +1,13 @@
+.logo-group {
+    text-align: center;
+    &__logos {
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    img {
+        height: 8rem;
+        object-fit: contain;
+    }
+}

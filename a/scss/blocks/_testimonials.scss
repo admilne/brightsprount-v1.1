@@ -1,0 +1,66 @@
+.testimonials {
+    text-align: center;
+    color: $dark;
+    margin-top: 8rem;
+    &:before {
+        content: "";
+        display: block;
+        background: url(./../../a/img/curves5-short.png) bottom left no-repeat;
+        background-size: 100% 100%; // width height
+        height: 4vw;
+        transform: translateY(2px);
+    }
+
+    .page-container-wrap {
+        background-color: $green;
+        padding: 8rem 0 4rem 0;
+        @media screen and (max-width: $breakpoint__tablet) {
+            padding: 4rem 0;
+        }
+    }
+
+    .swiper-wrapper {
+        align-items: center;
+    }
+
+    .swiper-container {
+        background: url(./../../a/img/open-quote.svg) top left no-repeat, 
+                    url(./../../a/img/close-quote.svg) bottom right no-repeat;
+    }
+
+    &__quote {
+        font-size: 2.4rem;
+        font-weight: 700;
+        font-style: italic;
+        max-width: 872px;
+        margin: 0 auto;
+        margin-top: 1.7em;
+        margin-bottom: 0.5em;
+        line-height: 1.2;
+        @media screen and (max-width: $breakpoint__phone) {
+            font-size: 1.6rem;
+            margin-left: 40px;
+            margin-right: 40px;
+        }
+    }
+
+    &__customer, &__customer:last-child {
+        font-size: 1.4rem;
+        font-style: italic;
+        font-weight: 300;
+        margin-bottom: 1em;
+    }
+
+    .swiper-pagination {
+        position: static;
+    }
+
+    .swiper-pagination-bullet {
+        background: $darkGreen;
+        opacity: 1;
+
+        &-active {
+            background-color: $dark;
+        }
+    }
+}
