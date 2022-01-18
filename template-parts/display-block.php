@@ -35,7 +35,8 @@ switch ( get_row_layout() ) {
         get_template_part('template-parts/blocks/featured-post');
         break;
     case 'banner':
-        get_template_part('template-parts/blocks/banner');
+        // get_template_part('template-parts/blocks/banner');
+        get_template_part('template-parts/blocks/video-banner');
         break;
     default:
         echo '<p>' . get_row_layout() . ' - no code for that block...</p>';

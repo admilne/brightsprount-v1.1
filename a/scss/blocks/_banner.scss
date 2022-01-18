@@ -1,11 +1,6 @@
 .banner {
     position: relative;
-    z-index: -1;
     overflow: hidden;
-
-    &:first-child {
-        margin-top: -4vw;
-    }
 
     img {
         width: 100%;
@@ -50,18 +45,5 @@
 
     &__textContent {
         padding: 4vw;
-    }
-
-    &::after {
-        content: "";
-        display: block;
-        background: url(./../../a/img/curves_banner.svg) bottom left no-repeat;
-        // background-size: cover;
-        height: 4vw;
-        transform: translateY(2px);
-        bottom: 0;
-        z-index: 1;
-        width: 101%;
-        position: absolute;
     }
 }

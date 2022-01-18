@@ -2,14 +2,14 @@
     text-align: center;
     color: $dark;
     margin-top: 8rem;
-    &:before {
-        content: "";
-        display: block;
-        background: url(./../../a/img/curves5-short.png) bottom left no-repeat;
-        background-size: 100% 100%; // width height
-        height: 4vw;
-        transform: translateY(2px);
-    }
+    // &:before {
+    //     content: "";
+    //     display: block;
+    //     background: url(./../../a/img/curves5-short.png) bottom left no-repeat;
+    //     background-size: 100% 100%; // width height
+    //     height: 4vw;
+    //     transform: translateY(2px);
+    // }
 
     .page-container-wrap {
         background-color: $green;
@@ -56,11 +56,11 @@
     }
 
     .swiper-pagination-bullet {
-        background: $darkGreen;
+        background: rgba(0,0,0,0.2);
         opacity: 1;
 
         &-active {
-            background-color: $dark;
+            background-color: rgba(0,0,0,0.4);
         }
     }
 }

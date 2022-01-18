@@ -1,27 +1,19 @@
 .header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: end;
     color: $white;
-    padding: 2rem 0;
+    padding: 2rem 0 0 0;
+    position: relative;
+    z-index: 1;
+    transform: translate3d(0, 0.4rem, 0);
     @media screen and (max-width: $breakpoint__tablet) {
-      padding: 1rem 0;
-  }
+      padding: 1rem 0 0 0;
+    }
     
     &__wrapper {
-        &:after {
-            content: "";
-            display: block;
-            // background: url(./../../a/img/curves6-dark.png) bottom left no-repeat;
-            background: url(./../../a/img/curves-header.png) bottom left no-repeat;
-            background-size: 102% 102%; // width height
-            height: 4vw;
-            transform: rotate(180deg) translateY(2px);
-            background-repeat: no-repeat;
-        }
-        .page-container-wrap {
-            background-color: $dark;
-        }
+      border-bottom: 5px solid #f9b233;
+        
     }
 
 
@@ -30,18 +22,19 @@
         align-items: center;
     }
     
-    .logo img {
-        max-height: 11.4rem;
-        margin-right: 2rem;
-        max-width: 25vw;
-        @media screen and (max-width: $breakpoint__tablet) {
-            margin-right: 1rem;
-        }
+    .logo {
+		img {
+			transform: translateY(0.74vw);
+			max-height: 11.4rem;
+			margin-right: 2rem;
+			max-width: 25vw;
+			display: block;
+			@media screen and (max-width: $breakpoint__tablet) {
+				margin-right: 1rem;
+			}
+      	}
     }
-
-    a {
-        color: $white;
-    }
+    
 }
 
 

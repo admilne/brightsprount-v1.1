@@ -55,7 +55,7 @@ acf_add_local_field_group(array(
 		),
 		array(
 			'key' => 'field_609838c0a7ee9',
-			'label' => 'Style',
+			'label' => 'Background colour',
 			'name' => 'style',
 			'type' => 'clone',
 			'instructions' => '',
@@ -68,6 +68,31 @@ acf_add_local_field_group(array(
 			),
 			'clone' => array(
 				0 => 'group_6097d72758a9c',
+			),
+			'display' => 'seamless',
+			'layout' => 'block',
+			'prefix_label' => 0,
+			'prefix_name' => 0,
+			'choices' => array(
+				'Red' => 'Red',
+				'Green' => 'Green',
+			),
+		),
+		array(
+			'key' => 'field_61df3d4560d64',
+			'label' => 'Text colour',
+			'name' => 'text_colour',
+			'type' => 'clone',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'clone' => array(
+				0 => 'group_61df3e284b5e1',
 			),
 			'display' => 'seamless',
 			'layout' => 'block',
@@ -111,6 +136,7 @@ acf_add_local_field_group(array(
 	'hide_on_screen' => '',
 	'active' => false,
 	'description' => '',
+	'show_in_rest' => 0,
 	'acfe_display_title' => '',
 	'acfe_autosync' => array(
 		0 => 'php',
@@ -118,7 +144,7 @@ acf_add_local_field_group(array(
 	'acfe_form' => 0,
 	'acfe_meta' => '',
 	'acfe_note' => '',
-	'modified' => 1635929169,
+	'modified' => 1642020490,
 ));
 
 endif;

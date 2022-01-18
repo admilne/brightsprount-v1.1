@@ -3,13 +3,13 @@
 if( function_exists('acf_add_local_field_group') ):
 
 acf_add_local_field_group(array(
-	'key' => 'group_6097d72758a9c',
-	'title' => 'Option: Background colour',
+	'key' => 'group_61df3e284b5e1',
+	'title' => 'Option: Text Colour',
 	'fields' => array(
 		array(
-			'key' => 'field_6097d738a2527',
-			'label' => 'Background colour',
-			'name' => 'style',
+			'key' => 'field_61df3e2851de9',
+			'label' => 'Text colour',
+			'name' => 'text_colour',
 			'type' => 'select',
 			'instructions' => '',
 			'required' => 0,
@@ -20,8 +20,8 @@ acf_add_local_field_group(array(
 				'id' => '',
 			),
 			'choices' => array(
-				'Red' => 'Red',
-				'Green' => 'Green',
+				'Black' => 'Black',
+				'Blue' => 'Blue',
 			),
 			'default_value' => 'none',
 			'allow_null' => 1,
@@ -59,7 +59,7 @@ acf_add_local_field_group(array(
 	'acfe_form' => 0,
 	'acfe_meta' => '',
 	'acfe_note' => '',
-	'modified' => 1642020541,
+	'modified' => 1642020570,
 ));
 
 endif;

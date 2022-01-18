@@ -86,6 +86,10 @@ require_once(dirname(__FILE__) . "/includes/optional/custom-shortcodes.php");
 /* ACF options page */
 require_once(dirname(__FILE__) . "/includes/optional/custom-options-page.php");
 
+/* ACF options page */
+require_once(dirname(__FILE__) . "/includes/optional/dynamically-populate-colour-selections.php");
+
+
 
 /* UTILITY FUNCTIONS
 ------------------------------------------------------------------------------------ */

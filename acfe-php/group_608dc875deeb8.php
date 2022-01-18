@@ -34,6 +34,48 @@ acf_add_local_field_group(array(
 				'acfe_bidirectional_enabled' => '0',
 			),
 		),
+		array(
+			'key' => 'field_61e427dc9d4c1',
+			'label' => 'Background colour',
+			'name' => 'bgstyle',
+			'type' => 'clone',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'clone' => array(
+				0 => 'group_6097d72758a9c',
+			),
+			'display' => 'seamless',
+			'layout' => 'block',
+			'prefix_label' => 0,
+			'prefix_name' => 0,
+		),
+		array(
+			'key' => 'field_61e427f39d4c2',
+			'label' => 'Text colour',
+			'name' => 'testimonial_text_colour',
+			'type' => 'clone',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'clone' => array(
+				0 => 'group_61df3e284b5e1',
+			),
+			'display' => 'seamless',
+			'layout' => 'block',
+			'prefix_label' => 0,
+			'prefix_name' => 0,
+		),
 	),
 	'location' => array(
 		array(
@@ -59,6 +101,7 @@ acf_add_local_field_group(array(
 	'hide_on_screen' => '',
 	'active' => true,
 	'description' => '',
+	'show_in_rest' => 0,
 	'acfe_display_title' => '',
 	'acfe_autosync' => array(
 		0 => 'php',
@@ -66,7 +109,7 @@ acf_add_local_field_group(array(
 	'acfe_form' => 0,
 	'acfe_meta' => '',
 	'acfe_note' => '',
-	'modified' => 1620401301,
+	'modified' => 1642343611,
 ));
 
 endif;

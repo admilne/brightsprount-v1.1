@@ -228,6 +228,26 @@ input[type="button"] {
 			margin: 4rem 0;
 		}
 
+		&--padded {
+			padding: 2rem 0;
+			@media screen and (max-width: $breakpoint__tablet) {
+				padding: 2rem 0;
+			}
+
+			.page-container {
+				&-wrap {
+					padding: 8rem 0;
+					@media screen and (max-width: $breakpoint__tablet) {
+						padding: 4rem 0;
+					}
+				}
+			}
+
+			h2:first-of-type {
+				margin-top: 0;
+			}
+		}
+
 		&--alt,
 		&--primary,
 		&--secondary {
@@ -285,12 +305,14 @@ input[type="button"] {
 	.button {
 		display: inline-block;
 		background-color: #74C868;
+		background-color: rgba(0,0,0,0.1);
 		// background-color: $dark;
 		color: #37505A;
 		color: $white;
 		font-family: Paralucent, Arial, sans-serif;
 		font-weight: bold;
 		border: none;
+		border: 1px solid rgba(0,0,0,0.6);
 		padding: 0.5em 2em;
 		border-radius: 10px;
 		transition: all 0.3s;
@@ -299,6 +321,7 @@ input[type="button"] {
 			cursor: pointer;
 			background-color: #2A8237;
 			background-color: $darkGreen;
+			background-color: rgba(0,0,0,0.4);
 			color: #F4F6F7;
 		}
 

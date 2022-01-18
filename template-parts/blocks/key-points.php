@@ -2,10 +2,17 @@
     $title = get_sub_field('title');
     $keyPoints = get_sub_field('key_points');
     $style = get_sub_field('style');
+    $colour = get_sub_field('text_colour');
+    $shouldLink = get_sub_field('link_items_through_to_pages');
+    $bgColour = $GLOBALS['brightSproutVars']['brandColours'][$style];
+    $textColour = $GLOBALS['brightSproutVars']['textColours'][$colour];
+
+    $paddedSection = $style ? 'page-section--padded' : '';
 ?>
 
-<div class="page-section page-section--<?php echo $style; ?>">
-    <div class="page-container-wrap">
+<div class="page-section <?php echo $paddedSection; ?>">
+    <?php get_template_part('template-parts/curves', null, ['colour' => $bgColour]); ?>
+    <div class="page-container-wrap" style="background-color: <?php echo $bgColour; ?>; color: <?php echo $textColour; ?>">
         <div class="page-container">
 
             <?php if($title) : ?>
@@ -27,11 +34,12 @@
                                     <span class="key-point__text key-point__text--standard"><?php echo $textElement['standard']; ?></span>
                                 <?php endif; ?>
                             <?php endforeach; ?>
-                        </p><!-- /.key-point -->
+                        </p>
 
                     <?php endforeach; ?>
-                </div><!-- /.page-title -->
+                </div>
             <?php endif; ?>
-        </div><!-- /.page-container -->
-    </div><!-- /.page-container-wrap -->
-</div><!-- /.page-section -->
+        </div>
+    </div>
+    <?php get_template_part('template-parts/curves', null, ['colour' => $bgColour]); ?>
+</div>
