@@ -56,14 +56,9 @@
         border-radius: 50%;
         padding: 0.25em 1em;
         border-radius: 10px;
-        color: $dark;
+        // color: $dark;
         font-family: $font__primary;
-        border: 1px solid $dark;
         transition: all 0.3s;
-        &:hover {
-            color: $dark;
-            background-color: rgba($dark, 0.2);
-        }
 
         .page-section--alt &,
         .page-section--primary & {

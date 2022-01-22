@@ -343,14 +343,11 @@ body.menuOpen {
 
 .button {
   display: inline-block;
-  background-color: #74C868;
-  background-color: rgba(0, 0, 0, 0.1);
   color: #37505A;
   color: #ffffff;
   font-family: Paralucent, Arial, sans-serif;
   font-weight: bold;
   border: none;
-  border: 1px solid rgba(0, 0, 0, 0.6);
   padding: 0.5em 2em;
   border-radius: 10px;
   transition: all 0.3s;
@@ -377,17 +374,16 @@ body.menuOpen {
   align-items: end;
   color: #ffffff;
   padding: 2rem 0 0 0;
-  position: relative;
-  z-index: 1;
-  transform: translate3d(0, 0.4rem, 0);
 }
 @media screen and (max-width: 1024px) {
   .header {
-    padding: 1rem 0 0 0;
+    padding: 1rem 0 1rem 0;
   }
 }
 .header__wrapper {
   border-bottom: 5px solid #f9b233;
+  position: relative;
+  z-index: 1;
 }
 .header__left-side {
   display: flex;
@@ -551,7 +547,7 @@ body.menuOpen {
   color: #F4F6F7;
 }
 .footer a {
-  color: #ffffff;
+  color: inherit;
   text-decoration: underline;
 }
 
@@ -751,8 +747,7 @@ body.menuOpen {
   margin-top: 8rem;
 }
 .testimonials .page-container-wrap {
-  background-color: #74C868;
-  padding: 8rem 0 4rem 0;
+  padding: 6rem 0 6rem 0;
 }
 @media screen and (max-width: 1024px) {
   .testimonials .page-container-wrap {
@@ -1000,14 +995,8 @@ body.menuOpen {
   border-radius: 50%;
   padding: 0.25em 1em;
   border-radius: 10px;
-  color: #37505A;
   font-family: Paralucent, Arial, sans-serif;
-  border: 1px solid #37505A;
   transition: all 0.3s;
-}
-.post-teaser__link:hover {
-  color: #37505A;
-  background-color: rgba(55, 80, 90, 0.2);
 }
 .page-section--alt .post-teaser__link, .page-section--primary .post-teaser__link {
   background-color: #ffffff;
@@ -1128,6 +1117,7 @@ body.menuOpen {
 .video-banner h1 {
   font-size: 8.6rem;
   font-size: 5vw;
+  line-height: 1;
 }
 
 /* Modules

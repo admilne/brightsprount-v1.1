@@ -1,19 +1,14 @@
 <?php
     $title = get_sub_field('title');
     $postData = get_sub_field('content_to_highlight');
-    $style = get_sub_field('style');
-    $colour = get_sub_field('text_colour');
-    $shouldLink = get_sub_field('link_items_through_to_pages');
-    $bgColour = $GLOBALS['brightSproutVars']['brandColours'][$style];
-    $textColour = $GLOBALS['brightSproutVars']['textColours'][$colour];
-
-    $paddedSection = $style ? 'page-section--padded' : '';
+    $theme = get_sub_field('style');
+    $themeClass = "theme-" . str_replace( " ", "-", strtolower( $theme ) );
+    $paddedSection = $theme ? 'page-section--padded' : '';
 ?>
 
-
-<div class="page-section <?php echo $paddedSection; ?>">
-    <?php get_template_part('template-parts/curves', null, ['colour' => $bgColour]); ?>
-    <div class="page-container-wrap" style="background-color: <?php echo $bgColour; ?>; color: <?php echo $textColour; ?>">
+<div class="page-section <?php echo $paddedSection; ?> <?php echo $themeClass; ?>">
+    <?php get_template_part('template-parts/curves', null, ['theme' => $theme]); ?>
+    <div class="page-container-wrap">
         <div class="page-container">
 
             <div class="content-highlight-grid">
@@ -51,5 +46,5 @@
         
         </div>
     </div>
-    <?php get_template_part('template-parts/curves', null, ['colour' => $bgColour]); ?>
+    <?php get_template_part('template-parts/curves', null, ['theme' => $theme]); ?>
 </div>

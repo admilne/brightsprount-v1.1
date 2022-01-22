@@ -7,6 +7,9 @@
 				$customLogoID = get_theme_mod('custom_logo');
 				$logo = wp_get_attachment_image_src($customLogoID, 'large')[0];
 
+				$theme = (get_field('footer_theme', 'option'))['style'];
+				$themeClass = "theme-" . str_replace( " ", "-", strtolower( $theme ) );
+
 			?>
 
 			</div><!-- END content -->
@@ -15,7 +18,7 @@
 				<?php get_template_part('template-parts/blocks/testimonials', null, $testimonials); ?>
 			<?php endif; ?>
 
-			<div class="footer">
+			<div class="footer <?php echo $themeClass; ?>">
 
 				<div class="page-container page-container--narrow">
 

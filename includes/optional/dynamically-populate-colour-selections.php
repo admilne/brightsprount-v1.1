@@ -16,12 +16,16 @@ function acf_load_brand_colour_choices( $field ) {
             the_row();
             
             // vars
-            $value = get_sub_field('colour');
+            $bgColour = get_sub_field('colour');
+            $textColour = get_sub_field('text_colour');
             $label = get_sub_field('name');
             
             // append to choices
             $field['choices'][ $label ] = $label;
-            $GLOBALS['brightSproutVars']['brandColours'][$label] = $value;
+            $GLOBALS['brightSproutVars']['brandColours'][$label] = $bgColour;
+
+            $GLOBALS['brightSproutVars']['themes'][$label]['bgColour'] = $bgColour;
+            $GLOBALS['brightSproutVars']['themes'][$label]['textColour'] = $textColour;
         }
     }
 

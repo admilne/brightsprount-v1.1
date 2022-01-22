@@ -3,20 +3,16 @@
     $postItem = get_sub_field('posts');
     $blogPage = get_page_by_title('Blog');
     $link = get_sub_field( 'overview_page_link' );
-    $style = get_sub_field('style');
-    $colour = get_sub_field('text_colour');
-    $shouldLink = get_sub_field('link_items_through_to_pages');
-    $bgColour = $GLOBALS['brightSproutVars']['brandColours'][$style];
-    $textColour = $GLOBALS['brightSproutVars']['textColours'][$colour];
-
-    $paddedSection = $style ? 'page-section--padded' : '';
+    $theme = get_sub_field('style');
+    $themeClass = "theme-" . str_replace( " ", "-", strtolower( $theme ) );
+    $paddedSection = $theme ? 'page-section--padded' : '';
 ?>
 
 
 
-<div class="page-section <?php echo $paddedSection; ?>">
-    <?php get_template_part('template-parts/curves', null, ['colour' => $bgColour]); ?>
-    <div class="page-container-wrap" style="background-color: <?php echo $bgColour; ?>; color: <?php echo $textColour; ?>">
+<div class="page-section <?php echo $paddedSection; ?> <?php echo $themeClass; ?>">
+    <?php get_template_part('template-parts/curves', null, ['theme' => $theme]); ?>
+    <div class="page-container-wrap">
         <div class="page-container">
             <?php if($title) : ?>
                 <h2><?php echo $title; ?></h2>
@@ -39,6 +35,6 @@
         
         </div>
     </div>
-    <?php get_template_part('template-parts/curves', null, ['colour' => $bgColour]); ?>
+    <?php get_template_part('template-parts/curves', null, ['theme' => $theme]); ?>
 </div>
 

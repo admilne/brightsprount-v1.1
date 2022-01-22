@@ -304,15 +304,14 @@ input[type="button"] {
 
 	.button {
 		display: inline-block;
-		background-color: #74C868;
-		background-color: rgba(0,0,0,0.1);
+		// background-color: #74C868;
+		// background-color: rgba(0,0,0,0.1);
 		// background-color: $dark;
 		color: #37505A;
 		color: $white;
 		font-family: Paralucent, Arial, sans-serif;
 		font-weight: bold;
 		border: none;
-		border: 1px solid rgba(0,0,0,0.6);
 		padding: 0.5em 2em;
 		border-radius: 10px;
 		transition: all 0.3s;

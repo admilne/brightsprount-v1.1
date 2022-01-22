@@ -2,18 +2,9 @@
     text-align: center;
     color: $dark;
     margin-top: 8rem;
-    // &:before {
-    //     content: "";
-    //     display: block;
-    //     background: url(./../../a/img/curves5-short.png) bottom left no-repeat;
-    //     background-size: 100% 100%; // width height
-    //     height: 4vw;
-    //     transform: translateY(2px);
-    // }
 
     .page-container-wrap {
-        background-color: $green;
-        padding: 8rem 0 4rem 0;
+        padding: 6rem 0 6rem 0;
         @media screen and (max-width: $breakpoint__tablet) {
             padding: 4rem 0;
         }

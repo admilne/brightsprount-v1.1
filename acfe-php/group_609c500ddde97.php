@@ -47,7 +47,7 @@ acf_add_local_field_group(array(
 		),
 		array(
 			'key' => 'field_609c500de7120',
-			'label' => 'Background colour',
+			'label' => 'Theme',
 			'name' => 'style',
 			'type' => 'clone',
 			'instructions' => '',
@@ -72,30 +72,6 @@ acf_add_local_field_group(array(
 				'Green 3' => 'Green 3',
 				'Grey' => 'Grey',
 				'Dark' => 'Dark',
-			),
-		),
-		array(
-			'key' => 'field_61e5dbc92648b',
-			'label' => 'Text colour',
-			'name' => 'text_colour',
-			'type' => 'clone',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'clone' => array(
-				0 => 'group_61df3e284b5e1',
-			),
-			'display' => 'seamless',
-			'layout' => 'block',
-			'prefix_label' => 0,
-			'prefix_name' => 0,
-			'choices' => array(
-				'White' => 'White',
 			),
 		),
 	),
@@ -124,7 +100,7 @@ acf_add_local_field_group(array(
 	'acfe_form' => 0,
 	'acfe_meta' => '',
 	'acfe_note' => '',
-	'modified' => 1642453985,
+	'modified' => 1642805254,
 ));
 
 endif;

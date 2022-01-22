@@ -20,6 +20,37 @@
 
 		<!-- Allows the website to work responsively for the width of the device -->
 		<meta name="viewport" content="width=device-width, initial-scale =1.0, user-scalable = no">
+
+		<style>
+			.button,
+			.footer input[type=submit],
+			.post-teaser__link {
+				background-color: <?php echo get_field('button_background_colour', 'option'); ?>;
+				color: <?php echo get_field('button_text_colour', 'option'); ?>;
+			}
+
+			.button:hover,
+			.footer input[type=submit]:hover,
+			.post-teaser__link:hover {
+				background-color: <?php echo get_field('button_hover_colour', 'option'); ?>;
+				color: <?php echo get_field('button_text_colour', 'option'); ?>;
+			}
+			
+			<?php foreach (get_field('brand_colours', 'option') as $theme) : ?>
+				<?php
+					$className = ".theme-" . str_replace( " ", "-", strtolower( $theme['name'] ) );
+					$textColour = $theme['text_colour'];
+					$bgColour = $theme['colour'];
+					$buttonBg = $theme['button_background'];
+					$buttonHover = $theme['button_hover'];
+					$buttonText = $theme['button_text'];
+				?>
+				<?php echo $className; ?> .page-container-wrap, .footer<?php echo $className; ?> { background-color: <?php echo $bgColour; ?>; color: <?php echo $textColour; ?>; }
+				<?php echo $className; ?> .curves__coloured { fill: <?php echo $bgColour; ?>; }
+				<?php echo $className; ?> .button, <?php echo $className; ?> .post-teaser__link, <?php echo $className; ?>.footer input[type=submit] { background-color: <?php echo $buttonBg; ?>; color: <?php echo $buttonText; ?>}
+				<?php echo $className; ?> .button:hover, <?php echo $className; ?> .post-teaser__link:hover, <?php echo $className; ?>.footer input[type=submit]:hover { background-color: <?php echo $buttonHover; ?>; }
+			<?php endforeach; ?>
+		</style>
 	</head>
 	<body <?php body_class(); ?>>
 
@@ -34,11 +65,10 @@
 							<div class="header__left-side">
 								<a href="<?php echo home_url(); ?>" class="logo"><img src="<?php echo $logo; ?>" alt=""></a>
 								
-								<div class="header-content">
-									<!-- <h2 class="header-content__title">Creative-led marketing</h2> -->
+								<!-- <div class="header-content">
 									<h2 class="header-content__title"><?php echo get_field('header_title', 'option'); ?></h2>
 									<p class="header-content__caption"><?php echo get_field('header_subtitle', 'option'); ?></p>
-								</div><!-- /.header-content -->
+								</div> -->
 							</div>
 			
 							<div class="header__right-side">

@@ -1,8 +1,5 @@
 .video-banner {
     position: relative;
-    // width: 1440px;
-    // max-width: 90vw;
-    // margin: 0 auto;
 
     &__title-container {
         position: absolute;
@@ -13,9 +10,6 @@
     h1 {
         font-size: 8.6rem;
         font-size: 5vw;
+        line-height: 1;
     }
-
-    // &__wrapper {
-    //     background-color: #E4E4E4;
-    // }
 }
