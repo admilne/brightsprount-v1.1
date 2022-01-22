@@ -7,7 +7,7 @@
 <div class="video-banner__wrapper">
     <div class="video-banner">
         <div class="videoWrapper">
-            <video muted autoplay>
+            <video muted autoplay playsinline>
                 <source src="movie.mp4" type="video/mp4">
                 <source src="<?php echo get_template_directory_uri(); ?>/a/video/hero-video.mp4" type="video/mp4">
                 Your browser does not support the video tag.

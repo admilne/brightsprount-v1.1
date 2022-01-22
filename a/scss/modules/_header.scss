@@ -9,6 +9,7 @@
     // transform: translate3d(0, 0.4rem, 0);
     @media screen and (max-width: $breakpoint__tablet) {
       padding: 1rem 0 1rem 0;
+      align-items: center;
     }
     
     &__wrapper {
@@ -28,7 +29,7 @@
 			transform: translateY(0.74vw);
 			max-height: 11.4rem;
 			margin-right: 2rem;
-			max-width: 25vw;
+			max-width: 30vw;
 			display: block;
 			@media screen and (max-width: $breakpoint__tablet) {
 				margin-right: 1rem;
