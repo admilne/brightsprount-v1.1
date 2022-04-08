@@ -13,7 +13,8 @@
 
             <div class="text-and-media">
                 <div class="text-and-media__text"><?php echo $text; ?></div>
-                <div class="text-and-media__embed videoWrapper">
+                <!-- <div class="text-and-media__embed videoWrapper"> -->
+                <div class="text-and-media__embed">
                     <?php echo $video; ?>
                 </div>
             </div>
