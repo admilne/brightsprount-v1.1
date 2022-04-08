@@ -12,7 +12,7 @@ function loadThemeResources() {
 	wp_enqueue_style( 'swiper_css', get_template_directory_uri() . '/a/css/swiper.min.css', array(), $swiperCssVersion );
 	wp_enqueue_style( 'swiper_lazy_css', get_template_directory_uri() . '/a/css/swiper-lazy-min.css', array(), $swiperLazyVersion );
 	wp_enqueue_style( 'typekit','https://use.typekit.net/xyj0qzk.css');
-	// wp_enqueue_style( 'googlefonts','http://fonts.googleapis.com?famil=font+name');
+	wp_enqueue_style( 'googlefonts','https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
 	
 	$jsVersion = filemtime( get_stylesheet_directory() . '/a/js/theme.js' );
 	$swiperJsVersion = filemtime( get_stylesheet_directory() . '/a/js/swiper.min.js' );

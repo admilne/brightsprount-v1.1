@@ -15,8 +15,9 @@
     }
 
     .swiper-container {
-        background: url(./../../a/img/open-quote.svg) top left no-repeat, 
-                    url(./../../a/img/close-quote.svg) bottom right no-repeat;
+        position: relative;
+    //     background: url(./../../a/img/open-quote.svg) top left no-repeat, 
+    //                 url(./../../a/img/close-quote.svg) bottom right no-repeat;
     }
 
     &__quote {
@@ -53,5 +54,18 @@
         &-active {
             background-color: rgba(0,0,0,0.4);
         }
+    }
+
+    .open-quote-svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .close-quote-svg {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        transform: rotate(180deg)
     }
 }

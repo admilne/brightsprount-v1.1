@@ -33,8 +33,12 @@
 			display: block;
 			@media screen and (max-width: $breakpoint__tablet) {
 				margin-right: 1rem;
+				max-width: 100%;
+				width: 300px;
+				transform: translateY(-15px);
+				position: absolute;
 			}
-      	}
+		}
     }
     
 }

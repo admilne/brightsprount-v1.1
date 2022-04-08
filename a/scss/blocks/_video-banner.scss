@@ -1,15 +1,32 @@
 .video-banner {
     position: relative;
+    overflow: hidden;
+    &:after {
+        content: "";
+        display: block;
+        background: url(./../../a/img/curves_banner.svg) bottom left no-repeat;
+        height: 4vw;
+        transform: translateY(2px);
+        bottom: 0;
+        width: 101%;
+        position: absolute;
+    }
 
     &__title-container {
         position: absolute;
-        bottom: 12vw;
+        bottom: 8vw;
         width: 100%;
     }
 
     h1 {
         font-size: 8.6rem;
         font-size: 5vw;
-        line-height: 1;
+        line-height: 1.1;
+        font-family: 'Inter', Paralucent, Arial, sans-serif;
+        text-align: center;
+    }
+
+    .videoWrapper {
+        padding-bottom: 42.588726513569937%;
     }
 }

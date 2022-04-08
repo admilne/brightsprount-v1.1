@@ -49,6 +49,9 @@
 				<?php echo $className; ?> .curves__coloured { fill: <?php echo $bgColour; ?>; }
 				<?php echo $className; ?> .button, <?php echo $className; ?> .post-teaser__link, <?php echo $className; ?>.footer input[type=submit] { background-color: <?php echo $buttonBg; ?>; color: <?php echo $buttonText; ?>}
 				<?php echo $className; ?> .button:hover, <?php echo $className; ?> .post-teaser__link:hover, <?php echo $className; ?>.footer input[type=submit]:hover { background-color: <?php echo $buttonHover; ?>; }
+				<?php echo $className; ?> .open-quote-svg path, <?php echo $className; ?> .close-quote-svg path { fill: <?php echo $textColour; ?>; }
+				<?php echo $className; ?> .open-quote-svg path, <?php echo $className; ?> .close-quote-svg path { fill: <?php echo $textColour; ?>; }
+				<?php echo $className; ?> .swiper-pagination-bullet-active { background: <?php echo $textColour; ?>; }
 			<?php endforeach; ?>
 		</style>
 	</head>

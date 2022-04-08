@@ -400,6 +400,10 @@ body.menuOpen {
 @media screen and (max-width: 1024px) {
   .header .logo img {
     margin-right: 1rem;
+    max-width: 100%;
+    width: 300px;
+    transform: translateY(-15px);
+    position: absolute;
   }
 }
 
@@ -531,6 +535,8 @@ body.menuOpen {
   padding: 0.5em;
   border-radius: 3px;
   font-family: Roboto, Georgia, "Times New Roman", Times, serif;
+  border: 1px solid;
+  background-color: #F4F6F7;
 }
 .footer input[type=submit] {
   background-color: #74C868;
@@ -759,7 +765,7 @@ body.menuOpen {
   align-items: center;
 }
 .testimonials .swiper-container {
-  background: url(./../../a/img/open-quote.svg) top left no-repeat, url(./../../a/img/close-quote.svg) bottom right no-repeat;
+  position: relative;
 }
 .testimonials__quote {
   font-size: 2.4rem;
@@ -793,6 +799,17 @@ body.menuOpen {
 }
 .testimonials .swiper-pagination-bullet-active {
   background-color: rgba(0, 0, 0, 0.4);
+}
+.testimonials .open-quote-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.testimonials .close-quote-svg {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: rotate(180deg);
 }
 
 .image-gallery__row {
@@ -1109,16 +1126,32 @@ body.menuOpen {
 
 .video-banner {
   position: relative;
+  overflow: hidden;
+}
+.video-banner:after {
+  content: "";
+  display: block;
+  background: url(./../../a/img/curves_banner.svg) bottom left no-repeat;
+  height: 4vw;
+  transform: translateY(2px);
+  bottom: 0;
+  width: 101%;
+  position: absolute;
 }
 .video-banner__title-container {
   position: absolute;
-  bottom: 12vw;
+  bottom: 8vw;
   width: 100%;
 }
 .video-banner h1 {
   font-size: 8.6rem;
   font-size: 5vw;
-  line-height: 1;
+  line-height: 1.1;
+  font-family: "Inter", Paralucent, Arial, sans-serif;
+  text-align: center;
+}
+.video-banner .videoWrapper {
+  padding-bottom: 42.5887265136%;
 }
 
 /* Modules

@@ -28,9 +28,9 @@
 							<?php if ( dynamic_sidebar('footer_text') ) : else : endif; ?>
 
 							<div class="footer__social-media-icons">
-								<a href="https://www.facebook.com/brightsproutmarketing" target="_blank"><img src="<?php echo THEME_IMAGES; ?>icon-facebook.svg" alt="Facebook"></a>
-								<a href="https://www.instagram.com/brightsproutmarketing" target="_blank"><img src="<?php echo THEME_IMAGES; ?>icon-instagram.svg" alt="Instagram"></a>
-								<a href="https://www.linkedin.com/company/bright-sprout" target="_blank"><img src="<?php echo THEME_IMAGES; ?>icon-linkedin.svg" alt="LinkedIn"></a>
+								<a href="https://www.facebook.com/brightsproutmarketing" target="_blank"><img src="<?php echo THEME_IMAGES; ?>icon-facebook-dark.svg" alt="Facebook"></a>
+								<a href="https://www.instagram.com/brightsproutmarketing" target="_blank"><img src="<?php echo THEME_IMAGES; ?>icon-instagram-dark.svg" alt="Instagram"></a>
+								<a href="https://www.linkedin.com/company/bright-sprout" target="_blank"><img src="<?php echo THEME_IMAGES; ?>icon-linkedin-dark.svg" alt="LinkedIn"></a>
 							</div><!-- /.footer__social-media-icons -->
 							<?php if ( dynamic_sidebar('copyright') ) : else : endif; ?>
 						</div>

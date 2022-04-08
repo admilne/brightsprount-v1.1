@@ -15,9 +15,12 @@
     
     <!-- <div class="page-container-wrap" style="background-color: <?php echo $bgColour; ?>; color: <?php echo $textColour; ?>"> -->
         <div class="page-container">
-    
+
+            
             <!-- Slider main container -->
             <div class="swiper-container">
+                <?php get_template_part('template-parts/open-quote', null, ['theme' => $theme['style']]); ?>
+                <?php get_template_part('template-parts/close-quote', null, ['theme' => $theme['style']]); ?>
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
     
